@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    tools:context=".MainActivity">
+
+    <org.quanye.ledrolling.customview.RollingView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:bgColor="#ff0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:speed="5"
+        app:titleText="XX加油！"
+        app:titleTextColor="#f00"
+        app:titleTextSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/rv">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/options"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文字："
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_et_selector"
+            android:hint="@string/rolling_text"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:paddingLeft="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文字大小："
+            android:textStyle="bold|italic" />
+
+        <SeekBar
+            android:id="@+id/sb_textsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="300"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="滚动速度："
+            android:textStyle="bold|italic" />
+
+        <SeekBar
+            android:id="@+id/sb_rollingspeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="24"/>
+
+        <!--<Switch-->
+            <!--android:id="@+id/swh_reverse"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/bg_btn_selector"-->
+            <!--android:text="@string/reverse"-->
+            <!--android:textSize="20sp"-->
+            <!--android:onClick="onReverse" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_bgcolor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_btn_selector"
+                android:text="@string/bgcolor"
+                android:textSize="20sp"
+                android:onClick="onBgColor"/>
+
+            <Button
+                android:id="@+id/btn_textcolor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_btn_selector"
+                android:text="@string/textcolor"
+                android:textSize="20sp"
+                android:onClick="onTextColor"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_selector"
+            android:text="@string/fullscreen"
+            android:textSize="20sp"
+            android:onClick="onStartFullScreen"/>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

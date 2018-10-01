@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RollingActivity">
+
+    <org.quanye.ledrolling.customview.RollingView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bgColor="#ff0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:speed="5"
+        app:titleText="XX加油！"
+        app:titleTextColor="#f00"
+        app:titleTextSize="40sp" />
+
+</android.support.constraint.ConstraintLayout>
